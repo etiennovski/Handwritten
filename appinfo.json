@@ -1,0 +1,155 @@
+{
+  "uuid": "d51209c0-530e-4597-942e-d224cca6a7a3",
+  "shortName": "Handwritten",
+  "longName": "Handwritten",
+  "companyName": "ERPJ",
+  "versionCode": 1,
+  "versionLabel": "1.3",
+  "watchapp": {
+    "watchface": true
+  },
+  "capabilities": ["configurable"],
+  "appKeys": {
+          "Inverted": 0},
+  "preferences": {
+        "url" : "http://etiennovski.github.io/Handwritten",
+        "items": [{
+        "name": "Inverted",
+        "title": "Choose background color",
+        "subtitle": "something",
+        "type": "boolean",
+        "off-text": "Black",
+        "on-text": "White",
+        "default": false
+}]},
+  "resources": {
+    "media": [
+      {
+        "menuIcon": true,
+        "type": "png",
+        "name": "IMAGE_MENU_ICON",
+        "file": "images/menu_icon_num6.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_0",
+        "file": "images/num_0.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_1",
+        "file": "images/num_1.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_2",
+        "file": "images/num_2.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_3",
+        "file": "images/num_3.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_4",
+        "file": "images/num_4.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_5",
+        "file": "images/num_5.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_6",
+        "file": "images/num_6.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_7",
+        "file": "images/num_7.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_8",
+        "file": "images/num_8.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_9",
+        "file": "images/num_9.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_10",
+        "file": "images/num_10.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_11",
+        "file": "images/num_11.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_12",
+        "file": "images/num_12.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_13",
+        "file": "images/num_13.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_14",
+        "file": "images/num_14.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_15",
+        "file": "images/num_15.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_16",
+        "file": "images/num_16.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_17",
+        "file": "images/num_17.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_18",
+        "file": "images/num_18.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_19",
+        "file": "images/num_19.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_20",
+        "file": "images/num_20.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_30",
+        "file": "images/num_30.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_40",
+        "file": "images/num_40.png"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_NUM_50",
+        "file": "images/num_50.png"
+      }
+    ]
+  }
+}

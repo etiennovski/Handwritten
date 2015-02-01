@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Handwritten</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.4.2/base-min.css&pure/0.4.2/buttons-min.css&pure/0.4.2/forms-min.css&pure/0.4.2/grids-min.css">
+
+	<style type="text/css" media="screen">
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+	font-family: "proxima-nova", sans-serif;
+}
+
+body {
+	min-width: 320px;
+	color: #777;
+	line-height: 1.6;
+}
+
+
+/* --------------------------
+ * Element Styles
+ * --------------------------
+*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	color: rgb(75, 75, 75);
+}
+h3 {
+	font-size: 1.25em;
+}
+h4 {
+	font-size: 1.125em;
+	margin: 0.5em 0 0 0;
+}
+
+a {
+	color: #3b8bba; /* block-background-text-normal */
+	text-decoration: none;
+}
+
+a:visited {
+	color: #265778; /* block-normal-text-normal */
+}
+
+label {
+	font-weight:bold;
+}
+
+
+/* --------------------------
+ * Layout Styles
+ * --------------------------
+*/
+
+/* Apply the .box class on the immediate parent of any grid element (pure-u-*) to apply some padding. */
+.l-box {
+	padding: 1em;
+}
+
+.l-wrap {
+	margin-left: auto;
+	margin-right: auto;
+}
+article .l-wrap {
+	margin-left: -1em;
+	margin-right: -1em;
+}
+
+
+/* --------------------------
+ * Header Module Styles
+ * --------------------------
+*/
+
+header {
+	font-family: "omnes-pro", sans-serif;
+	max-width: 768px;
+	margin: 0 auto;
+	padding: 1em;
+	text-align: center;
+	border-bottom: 1px solid #eee;
+	background: #fff;
+}
+header h1 {
+	font-size: 200%;
+	font-weight: 100;
+	margin: 0;
+}
+header h2 {
+	font-size: 125%;
+	font-weight: 100;
+	line-height: 1.5;
+	margin: 0;
+	color: #666;
+}
+
+
+/* --------------------------
+ * Content Module Styles
+ * --------------------------
+*/
+
+/* The content div is placed as a wrapper around all the docs */
+article {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1em;
+	padding-right: 1em;
+	max-width: 768px;
+}
+
+/* --------------------------
+ * Footer Module Styles
+ * --------------------------
+*/
+
+footer {
+	font-size: 87.5%;
+	border-top: 1px solid #eee;
+	padding: 1.1429em;
+	background: rgb(250, 250, 250);
+}
+
+/* Sticky footer: http://ryanfait.com/html5-sticky-footer/ */
+
+* {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -55px; /* the bottom margin is the negative value of the footer's height */
+}
+footer, .push {
+	height: 55px; /* '.push' must be the same height as 'footer' */
+}
+
+/* --------------------------
+ * Error Display
+ * --------------------------
+*/
+
+.invalid {
+	color:#b94a48;
+	border-color:#ee5f5b.
+}
+.error {
+	color: #ee5f5b;
+}
+
+/* --------------------------
+ * Radio button
+ * --------------------------
+*/
+
+.form-inline {display: inline-block; float: left;}
+
+.pure-form .pure-radio {
+	margin: 0.5em 1em;
+	display: inline-block;
+}
+
+input[type=checkbox], input[type=radio] {
+	margin-right: 1em;
+}
+
+/* --------------------------
+ * Select
+ * --------------------------
+*/
+
+/* Fix select being to low in Android Webkit. Removes arrows */
+select {
+	-webkit-appearance: listbox;
+}
+
+/* --------------------------
+ * Number - Range
+ * --------------------------
+*/
+
+.pure-u-1-4 > .l-box {padding-left: 0; padding-right: 0;}
+.pure-u-3-4 > .l-box {padding-left: 0; padding-right: 2em}
+
+input[type='range'] {
+	-webkit-appearance: none !important;
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: inset 0 0 5px #333;
+	background-color: #E6E6E6;
+	display: block;
+	height: 0.5em;
+	left: 0.5em;
+	margin: 1.125em;
+	position: relative;
+	right: 0.5em;
+}
+input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none !important;
+	-webkit-border-radius: 10px;
+	background-color: #AAA;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#EEE), to(#AAA));
+	border: 1px solid #999;
+	height: 2em;
+	width: 2em;
+}
+
+/* --------------------------
+ * Button
+ * --------------------------
+*/
+
+button {width: 45%}
+
+@media only screen and (max-width :480px)
+{.pure-form button[type=submit]{margin:0}}
+
+#save {float: left;}
+#cancel {float: right;}
+
+/* --------------------------
+ * Styles
+ * --------------------------
+*/
+#log {
+	margin: 0.5em 0
+}
+
+#description {
+	padding-top: 1em;
+}
+
+.is-center {
+	text-align: center;
+}
+
+div.clear {
+	clear: both;
+}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<h1>Handwritten</h1>
+		</header>
+		<article>
+			
+			<form class="pure-form pure-form-stacked">
+				<fieldset>
+					<div class="pure-control-group">
+						<h4>Choose background color</h4>
+						<div class="description"></div>
+						<label for="Inverted-off" class="pure-radio">
+							<input id="Inverted-off" type="radio" name="Inverted" value="0" data-exclude checked>
+							Black
+						</label>
+						<label for="Inverted" class="pure-radio">
+							<input id="Inverted" type="radio" name="Inverted" value="1">
+							White
+						</label>
+						<script type="text/javascript">
+						document.querySelector("#Inverted").checked = false;
+						</script>
+					</div>
+				</fieldset>
+				<div class="buttons">
+					<button id="save" class="pure-button pure-button-primary" type="submit">Save</button>
+					<button id="cancel" class="pure-button" type="reset">Cancel</button>
+				</div>
+				<div class="clear"></div>
+			</form>
+			<div id="log"></div>
+			<div class="push"></div>
+		</article>
+	</div>
+	<footer class="l-box is-center">
+		Powered by Pebble Autoconfig
+	</footer>
+	<script type="text/javascript">
+/* --------------------------
+ * Validation
+ * --------------------------
+*/
+function validate() {
+	var parent = findParentByClassName(this, "pure-control-group");
+	var errorNode = parent.querySelector( ".error" ),
+	span = document.createElement( "span" );
+
+	this.classList.remove( "invalid" );
+	if ( errorNode ) {
+		errorNode.parentNode.removeChild( errorNode );
+	}
+
+	if ( !this.validity.valid ) {
+		this.classList.add( "invalid" );
+		parent.appendChild( span );
+		span.classList.add( "error" );
+		span.innerHTML = this.validationMessage != "" ? this.validationMessage : "Please match the requested format.";
+	}
+};
+
+var form = document.querySelector( "form" ),
+inputs = form.querySelectorAll( "input" );
+
+for ( var i = 0; i < inputs.length; i++ ) {
+	inputs[ i ].addEventListener( "blur", validate );
+	inputs[ i ].addEventListener( "invalid", validate );
+};
+
+form.addEventListener( "invalid", function( event ) {
+	event.preventDefault();
+}, true );
+
+/* checkValidity() always returns true in Android Webkit, this check works */
+HTMLFormElement.prototype.checkValidityAndroid=function() {
+	var inputs = this.querySelectorAll( "input" );
+	for ( var i = 0; i < inputs.length; i++ ) {
+		if(!inputs[i].validity.valid) {
+			return false;
+		}
+	}
+	return true;
+};
+/**
+ * This is a modified version of PConfig
+ * PConfig is copyright (c) 2013 Matthew Congrove (http://github.com/mcongrove)
+ */
+var PConfig = function () {
+	this.init = function () {
+		this.setFormValues();
+	};
+	this.getUrlParams = function () {
+		var params = {};
+		var bits = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/g, function (match, key, value) {
+			params[key] = value;
+		});
+		log("URL parameters: " + JSON.stringify(params, null, 1));
+		return params;
+	};
+	this.getFormFields = function () {
+		var field_ids = [];
+		var fields_input = document.getElementsByTagName("input");
+		var fields_select = document.getElementsByTagName("select");
+		var fields_textarea = document.getElementsByTagName("textarea");
+		for (var i = 0, x = fields_input.length; i < x; i++) {
+			if (fields_input[i].type != "submit" && fields_input[i].type != "reset" && !fields_input[i].hasAttribute("data-exclude")) {
+				field_ids.push(fields_input[i].id);
+			}
+		}
+		for (var i = 0, x = fields_select.length; i < x; i++) {
+			field_ids.push(fields_select[i].id);
+		}
+		for (var i = 0, x = fields_textarea.length; i < x; i++) {
+			field_ids.push(fields_textarea[i].id);
+		}
+		return field_ids;
+	};
+	this.getFormValues = function () {
+		var fields = this.getFormFields();
+		var values = {};
+		for (var i = 0, x = fields.length; i < x; i++) {
+			var field = document.getElementById(fields[i]);
+			if (field.type == "radio") {
+				var value = field.checked ? 1 : 0;
+			} else {
+				var value = field.value;
+			}
+
+			if (field.type == "number" || field.type == "select-one") {
+				value = parseInt(value);
+			}
+
+			values[fields[i]] = value;
+		}
+		log("Response data: " + JSON.stringify(values, null, 1));
+		return values;
+	};
+	this.setFormValues = function () {
+		
+		var params = this.getUrlParams();
+		
+		for (key in params) {
+			var field = document.getElementById(key);
+			if (document.getElementById(field.id) != null) {
+				if (field.type == "radio") {
+					var radios = document.getElementsByName(field.name);
+					for (var i = 0; i < radios.length; i++) {
+						if(radios[i].value == params[key]) {
+							radios[i].checked = true;
+						}
+					};
+					
+				} else {
+					field.value = decodeURIComponent(params[key]);
+				}
+			}
+		}
+	};
+};
+PConfig = new PConfig();
+/* --------------------------
+ * Pebble Autoconfig
+ * --------------------------
+*/
+PConfig.init();
+
+/* Initialize all range sliders */
+var numberElements = document.querySelectorAll('input[type="number"]');
+
+for ( var i = 0; i < numberElements.length; i++ ) {
+	var parent = findParentByClassName(numberElements[i], "pure-g");
+	var node = parent.querySelector('input[type="range"]');
+	node.value = numberElements[i].value;
+}
+
+/* --------------------------
+ * Helpers
+ * --------------------------
+*/
+
+if( /iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
+	var element = document.querySelector("header");
+	element.parentNode.removeChild(element);
+}
+
+function findParentByClassName(node, className) {
+	if (node.classList.contains(className)) {
+		return node;
+	} else {
+		if (node.parentNode != null) {
+			return findParentByClassName(node.parentNode, className);
+		} else {
+			return null;
+		}
+	}
+}
+
+function log (text) {
+}
+
+/* --------------------------
+ * Number + Range
+ * --------------------------
+*/
+
+if(document.querySelector('input[type="number"]') != null) {
+	document.querySelector('input[type="number"]').addEventListener('blur', function (event) {
+		var parent = findParentByClassName(this, "pure-g");
+		var node = parent.querySelector('input[type="range"]');
+		node.value = this.value;
+	});
+
+	document.querySelector('input[type="range"]').addEventListener('change', function (event) {
+		var parent = findParentByClassName(this, "pure-g");
+		var node = parent.querySelector('input[type="number"]');
+		node.value = this.value;
+	});
+}
+
+/* --------------------------
+ * Buttons
+ * --------------------------
+*/
+
+document.getElementById("save").addEventListener("click", function (event) {
+	log("Save clicked");
+	var form = document.querySelector("form");
+	if (form.checkValidity() && form.checkValidityAndroid()) {
+		location.href = 'pebblejs://close#' + encodeURIComponent(JSON.stringify(PConfig.getFormValues()));
+	}
+	event.preventDefault();
+});
+
+document.getElementById('cancel').addEventListener('click', function (event) {
+	event.preventDefault();
+	log("Cancel clicked");
+	location.href = 'pebblejs://close#';
+	
+});
+
+/* --------------------------
+ * Debug
+ * --------------------------
+*/
+log("User-agent: " + navigator.userAgent );
+	</script>
+</body>
+</html>

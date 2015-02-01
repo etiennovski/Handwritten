@@ -1,0 +1,34 @@
+#ifndef autoconfig_h
+#define autoconfig_h
+
+#include <pebble.h>
+
+{% if 'items' in preferences %}
+{% for item in preferences['items']: %}
+{%- if item['type'] == 'enum' %}
+typedef enum {
+{%- for key, choice in item['choices'].iteritems(): %}
+	{{ item['name']|cvarname|upper }}_{{ key|cvarname }},
+{%- endfor %}
+} {{ item['name']|cvarname|capitalize }}Value;
+{% endif %}
+#define {{ item['name']|cvarname|upper }}_PKEY {{ appKeys[item['name']] }}
+{%- if item['type'] == 'enum' %}
+{{ item['name']|cvarname|capitalize }}Value get{{ item['name']|cvarname|capitalize }}();
+{%- elif item['type'] == 'boolean' %}
+bool get{{ item['name']|cvarname|capitalize }}();
+{%- elif item['type'] == 'string' %}
+char* get{{ item['name']|cvarname|capitalize }}();
+{%- else %}
+int32_t get{{ item['name']|cvarname|capitalize }}();
+{%- endif %}
+{% endfor %}
+{%- endif %}
+
+void autoconfig_in_received_handler(DictionaryIterator *iter, void *context); 
+
+void autoconfig_init();
+
+void autoconfig_deinit();
+
+#endif

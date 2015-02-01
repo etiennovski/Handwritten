@@ -1,0 +1,8 @@
+argv = ['/Users/Etienne/pebble-dev/PebbleSDK-2.6.1/Pebble/waf', 'configure', 'build']
+environ = {'TERM_SESSION_ID': '6E0E29CF-6891-4A3E-A147-C8C76F40FECA', 'SSH_AUTH_SOCK': '/tmp/launch-HH0wPm/Listeners', 'PYTHONPATH': '/Users/Etienne/pebble-dev/PebbleSDK-current/bin/../.env/lib/python2.7/site-packages', 'VERSIONER_PYTHON_PREFER_32_BIT': 'no', 'TERM_PROGRAM_VERSION': '326', 'SHELL': '/bin/bash', 'LOGNAME': 'Etienne', 'USER': 'Etienne', 'HOME': '/Users/Etienne', 'PATH': '/Users/Etienne/pebble-dev/PebbleSDK-current/bin:/Users/Etienne/pebble-dev/PebbleSDK-2.0-BETA7/bin:/Users/Etienne/pebble-dev/PebbleSDK-2.0-BETA2/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/Etienne/pebble-dev/PebbleSDK-2.6.1/arm-cs-tools/bin', 'DISPLAY': '/tmp/launch-nSd7HA/org.macosforge.xquartz:0', 'TMPDIR': '/var/folders/0q/m7v74g8x4p53b7yw8l6vvskr0000gp/T/', 'TERM_PROGRAM': 'Apple_Terminal', 'LANG': 'fr_CA.UTF-8', 'TERM': 'xterm-256color', 'Apple_PubSub_Socket_Render': '/tmp/launch-85BTOR/Render', 'VERSIONER_PYTHON_VERSION': '2.7', 'SHLVL': '2', '__CF_USER_TEXT_ENCODING': '0x1F6:0:11', 'PWD': '/Users/Etienne/pebble-dev/handwritten', '_': '/Users/Etienne/pebble-dev/PebbleSDK-2.6.1/Pebble/waf', '__CHECKFIX1436934': '1'}
+files = ['/Users/Etienne/pebble-dev/handwritten/wscript']
+hash = 8796265997396911432
+options = {'files': '', 'jobs': 4, 'verbose': 0, 'nocache': False, 'progress_bar': 0, 'timestamp': None, 'distcheck_args': None, 'top': '', 'destdir': '', 'keep': 0, 'zones': '', 'debug': False, 'prefix': '/usr/local/', 'download': False, 'force': False, 'targets': '', 'out': ''}
+out_dir = '/Users/Etienne/pebble-dev/handwritten/build'
+run_dir = '/Users/Etienne/pebble-dev/handwritten'
+top_dir = '/Users/Etienne/pebble-dev/handwritten'

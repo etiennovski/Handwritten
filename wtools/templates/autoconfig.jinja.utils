@@ -1,0 +1,3 @@
+{%- macro ctype(item) -%}
+{%- if item['type'] == 'int' %}int{% elif item['type'] == 'boolean' %}bool{% elif item['type'] == 'string' %}char*{%-endif -%}
+{%- endmacro -%}
