@@ -1,5 +1,6 @@
 .lock-*
 /build
+*.pyc
 
 ##
 # OSX Specifics
