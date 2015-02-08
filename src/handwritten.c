@@ -63,9 +63,9 @@ static int before_last_written = -1;
 static int initial_delay = 0;       //(time used to hide the previous number)
 static int moved_down = 0;
 
-static GBitmap *images[TOTAL_IMAGE_SLOTS];
-static BitmapLayer *image_layers[TOTAL_IMAGE_SLOTS];
-static Layer *hiding_layers[TOTAL_IMAGE_SLOTS];
+static GBitmap *images[TOTAL_IMAGE_SLOTS] = {NULL, NULL, NULL};
+static BitmapLayer *image_layers[TOTAL_IMAGE_SLOTS] = {NULL, NULL, NULL};
+static Layer *hiding_layers[TOTAL_IMAGE_SLOTS] = {NULL, NULL, NULL};
 
 // The state is either "empty" or the digit of the image currently in
 // the slot--which was going to be used to assist with de-duplication
@@ -172,8 +172,15 @@ static void load_digit_image_into_slot(int slot_number, int digit_value, signed 
 	// layer_insert_above_sibling(bitmap_layer_get_layer(hiding_layer),bitmap_layer_get_layer(bitmap_layer));
 
 	// Init the layer to hide the number
-	Layer *hiding_layer = layer_create(frame);
-	hiding_layers[slot_number]=hiding_layer;
+	//Layer *hiding_layer = layer_create(frame);
+	//hiding_layers[slot_number]=hiding_layer;
+
+	if ( ! hiding_layers[slot_number]) {
+		hiding_layers[slot_number] = layer_create(frame);
+	}
+
+	Layer *hiding_layer = hiding_layers[slot_number];
+
 	layer_set_update_proc(hiding_layer, hiding_layer_update_callback);
 	layer_add_child(window_layer, hiding_layer);
 
