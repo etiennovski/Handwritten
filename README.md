@@ -4,7 +4,7 @@ Currently suffering from a memory leak problem. he watchface  will crash after a
 
 ## Build
 
-### Unix / Macintosh
+### Macintosh
 
 Prerequisites:
 
