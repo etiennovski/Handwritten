@@ -403,7 +403,7 @@ static void set_color(bool inverse)
 {
 	GColor backgroundColor = inverse ? GColorWhite : GColorBlack;
 
-	window_set_background_color(window, GColorBlack);
+	window_set_background_color(window, backgroundColor);
 }
 
 static void in_received_handler(DictionaryIterator *iter, void *context)
